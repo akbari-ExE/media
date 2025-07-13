@@ -1,0 +1,177 @@
+/* Change Number 1: Improved UI styling with font size hierarchy, better spacing, and subtle animations */
+body {
+    font-family: 'Vazir', 'Arial', sans-serif; /* استفاده از فونت فارسی Vazir برای خوانایی بهتر */
+    direction: rtl;
+    background-color: #f3f4f6; /* پس‌زمینه ملایم‌تر */
+    color: #374151;
+    line-height: 1.6;
+    font-size: 16px; /* اندازه فونت پایه */
+}
+
+h1 {
+    font-size: 2rem; /* بزرگ‌تر کردن عنوان اصلی */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem; /* اندازه مناسب برای عناوین فرعی */
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px; /* گوشه‌های گرد */
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* سایه ملایم */
+}
+
+th, td {
+    border: 1px solid #e5e7eb;
+    text-align: right;
+    padding: 12px; /* افزایش فاصله داخلی */
+}
+
+th {
+    background-color: #f9fafb;
+    font-size: 0.95rem; /* فونت کمی کوچک‌تر برای سرستون‌ها */
+    font-weight: 600;
+}
+
+td {
+    font-size: 0.9rem; /* فونت کوچک‌تر برای محتوای جدول */
+}
+
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.hidden {
+    display: none;
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.season-list, .episode-list {
+    margin-right: 24px; /* افزایش فاصله برای خوانایی */
+}
+
+.season-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color: #ffffff;
+}
+
+.toggle-series, .toggle-season {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem; /* فونت کمی کوچک‌تر برای عناصر تعاملی */
+    transition: color 0.2s ease;
+}
+
+.toggle-series:hover, .toggle-season:hover {
+    color: #1e40af; /* رنگ تیره‌تر برای hover */
+}
+
+button.bg-blue-500 {
+    background-color: #3b82f6;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button.bg-blue-500:hover {
+    background-color: #1e40af;
+    transform: translateY(-1px); /* انیمیشن بالا آمدن دکمه */
+}
+
+a.text-blue-500 {
+    font-size: 0.9rem; /* فونت کوچک‌تر برای لینک‌ها */
+    transition: color 0.2s ease;
+}
+
+a.text-blue-500:hover, a.text-yellow-500:hover, a.text-red-500:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+.login-form, .register-form, .change-password-form, .edit-user-form {
+    max-width: 500px; /* افزایش عرض فرم‌ها برای راحتی */
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+label {
+    font-size: 0.9rem; /* فونت کوچک‌تر برای برچسب‌ها */
+    color: #4b5563;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"], input[type="password"], select {
+    font-size: 0.9rem; /* فونت کوچک‌تر برای ورودی‌ها */
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    width: 100%;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+
+input[type="checkbox"] {
+    accent-color: #3b82f6; /* رنگ چک‌باکس‌ها */
+}
+
+table th, table td {
+    min-width: 120px; /* افزایش حداقل عرض ستون‌ها */
+}
+
+select[multiple], .checkbox-container {
+    width: 100%;
+    max-height: 200px; /* افزایش ارتفاع برای چک‌باکس‌ها */
+    overflow-y: auto;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.checkbox-container {
+    background-color: #f9fafb;
+}
+
+.seasons-row, .episode-list {
+    transition: all 0.3s ease;
+}
+
+/* استایل‌های ریسپانسیو */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    table th, table td {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+    .login-form, .register-form, .change-password-form, .edit-user-form {
+        padding: 16px;
+    }
+}
